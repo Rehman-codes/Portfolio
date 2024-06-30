@@ -1,13 +1,14 @@
 *{
-  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html,body{
-  width: 100vw;
+html,body,#root{
+  width: 100%;
   height: auto;
   background-color: blanchedalmond;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin: 0;
 }
