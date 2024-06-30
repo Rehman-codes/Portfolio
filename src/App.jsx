@@ -1,14 +1,19 @@
-import './App.css'
+import './App.css';
+import Projects from './components/Projects.jsx';
+import Contact from './components/Contact.jsx';
+import Skills from './components/Skills.jsx';
+import Intro from './components/Introduction.jsx';
 
 function App() {
 
   return (
     <>
-      <div>
-       <h1>My portfolio</h1>
-      </div>
+      <Intro />
+      <Projects/>
+      <Skills/>
+      <Contact/>
     </>
   )
 }
 
-export default App
+export default App;
