@@ -9,14 +9,21 @@
     box-sizing: border-box;
 }
 
-.skill{
+#skill{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    width: 25%;
-    min-height: 30%;
+    width:90%;
+    height: 30%;
     border: 1px solid black;
     margin: 2%;
     padding: 1%;
     box-sizing: border-box;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    margin: 2%;
 }
