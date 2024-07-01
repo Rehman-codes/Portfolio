@@ -1,7 +1,7 @@
 import './App.css';
-import Projects from './components/Projects.jsx';
-import Contact from './components/Contact.jsx';
-import Skills from './components/Skills.jsx';
+import Projects from './components/Projects/Projects.jsx';
+import Contact from './components/Contact/Contact.jsx';
+import Skills from './components/Skills/Skills.jsx';
 import Intro from './components/Intro/Introduction.jsx';
 
 function App() {
