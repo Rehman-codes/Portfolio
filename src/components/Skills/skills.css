@@ -1,0 +1,22 @@
+#skills{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    min-height: 30%;
+    border: 1px solid black;
+    margin: 2%;
+    padding: 1%;
+    box-sizing: border-box;
+}
