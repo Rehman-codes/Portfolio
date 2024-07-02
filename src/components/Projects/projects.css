@@ -5,7 +5,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid black;
     box-sizing: border-box;
 }
 
@@ -19,12 +18,18 @@
     margin: 2%;
     padding: 1%;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 #projects-heading{
     text-align: center;
 }
 
-button{
+#action-buttons > button{
     margin: 1%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgb(125, 125, 125);
+    width: 25%;
+    height: 100%;
 }

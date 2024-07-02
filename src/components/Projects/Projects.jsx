@@ -23,8 +23,10 @@ function Projects() {
         <div key={repo.id} className="card">
             <h2>{repo.name || 'Title'}</h2>
             <p>{repo.description || 'Description'}</p>
-            <button onClick={() => window.location.href = repo.html_url}>Github</button>
-            <button onClick={() => window.location.href = repo.homepage}>Preview</button>
+            <div id='action-buttons'>
+               <button onClick={() => window.location.href = repo.html_url}>Github</button>
+               <button onClick={() => window.location.href = repo.homepage}>Preview</button>
+            </div>
         </div>
         )
 });

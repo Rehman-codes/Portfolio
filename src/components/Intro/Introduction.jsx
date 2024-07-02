@@ -1,4 +1,5 @@
 import './intro.css';
+import profilePic from '../../assets/file.png'
 
 function Intro() {
 
@@ -7,11 +8,11 @@ function Intro() {
         <section id="intro">
             <div id='intro-sub-section-1' className='intro-sub-section'>
                 <h1>Abdur Rehman</h1>
-                <h4>Software Engineer</h4>
+                <h4>Software Engineer | Web Developer | Designer</h4>
             </div>
 
             <div id='intro-sub-section-2' className='intro-sub-section'>
-                <h1>pic</h1>
+                <img src={profilePic} alt="profile pic" />
             </div>
 
         </section>
