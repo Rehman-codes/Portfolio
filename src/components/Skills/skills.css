@@ -12,6 +12,7 @@
 #skill{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width:90%;
@@ -22,7 +23,7 @@
     box-sizing: border-box;
 }
 
-img{
+#skill > img{
     height: 50px;
     width: 50px;
     margin: 2%;

@@ -31,7 +31,7 @@ function Projects() {
 
     return (
         <>
-            <h1>Projects</h1>
+            <h1 id='projects-heading'>Projects</h1>
             <section id="projects">
                 {allRepos}
             </section>

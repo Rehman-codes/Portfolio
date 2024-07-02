@@ -5,11 +5,12 @@ function Intro() {
 
     return (
         <section id="intro">
-            <div className='intro-sub-section'>
-                <h1>Line</h1>
+            <div id='intro-sub-section-1' className='intro-sub-section'>
+                <h1>Abdur Rehman</h1>
+                <h4>Software Engineer</h4>
             </div>
 
-            <div className='intro-sub-section'>
+            <div id='intro-sub-section-2' className='intro-sub-section'>
                 <h1>pic</h1>
             </div>
 

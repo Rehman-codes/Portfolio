@@ -7,14 +7,35 @@
     align-items: center;
 }
 
-.intro-sub-section{
-    height: 80%;
-    width: 100%;
+#intro-sub-section-1{
+   
+}
+
+#intro-sub-section-1 > h1, #intro-sub-section-1 > h4{
+   display: block;
+}
+
+#intro-sub-section-2{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.intro-sub-section{
+    height: 80%;
+    width: 100%;
     border: 1px solid black;
     box-sizing: border-box;
     margin: 2%;
 }
 
+
+#intro-sub-section-1 > h1{
+    font-size: 100px;
+    margin: 0;
+}
+
+#intro-sub-section-1 > h4{
+    font-size: 30px;
+    margin: 0;
+}
