@@ -40,6 +40,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(236, 236, 236);
 }
 
 #intro-sub-section-2 > img{
