@@ -1,21 +1,19 @@
-import './App.css';
-import Projects from './components/Projects/Projects.jsx';
-import Contact from './components/Contact/Contact.jsx';
-import Skills from './components/Skills/Skills.jsx';
-import Intro from './components/Intro/Introduction.jsx';
-import Top from './components/Top/top.jsx';
+import "./index.css";
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-function App() {
+import Home from "./pages/Home";
 
-  return (
-    <>
-      <Top/>
-      <Intro />
-      <Projects/>
-      <Skills/>
-      <Contact/>
-    </>
-  )
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <Home />
+    ),
+  },
+]);
+
+export default function App() {
+  return <RouterProvider router={router} />;
 }
 
-export default App;
