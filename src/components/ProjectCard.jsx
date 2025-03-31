@@ -3,7 +3,7 @@ import Tooltip from "../utilities/Tooltip";
 
 export default function ProjectCard({ projects }) {
     return (
-        <main className="w-[95%] h-auto mt-[20vh] flex flex-col mb-20 rounded-lg shadow-lg text-black">
+        <main className="w-[75%] h-auto mt-[20vh] flex flex-col mb-20 rounded-lg shadow-lg text-black">
             {projects.map((project, index) => (
                 <div
                     key={index}
