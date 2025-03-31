@@ -1,2 +1,5 @@
 @import 'tailwindcss';
 
+body {
+    cursor: url('/cursor_white.svg') 16 16, auto;
+}

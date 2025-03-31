@@ -17,8 +17,8 @@ export default function Bottom() {
     ];
 
     return (
-        <div className="flex justify-center items-center absolute bottom-0 left-0 w-full h-[10%]">
-            <nav className="h-[60%] rounded-3xl bg-white inline-flex justify-around items-center px-4">
+        <div className="flex justify-center items-center fixed bottom-0 left-0 w-full h-[10%]">
+            <nav className="border-[0.5px] border-black h-[60%] rounded-3xl bg-white inline-flex justify-around items-center px-4">
                 {/* Navigation Icons */}
                 {navIcons.map(({ Icon, title, link }, index) => (
                     <Tooltip key={index} title={title}>
