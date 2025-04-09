@@ -17,6 +17,22 @@ const projects = [
         },
     },
     {
+        title: "Inventory Management",
+        description: "This is the Manager Service of an Inventory Management System build in collaboration with my fellow engineers as the semester project of Web Engineering.",
+        tech: [
+            { name: "React", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+            { name: "Node", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
+            { name: "Express", logo: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png" },
+            { name: "MongoDB", logo: "/mongoDB.svg" },
+        ],
+        media: "/stockar.png",
+        links: {
+            live: "https://stockar.vercel.app/",
+            github: "https://github.com/Rehman-codes/WE-Project",
+            files: "https://drive.google.com/drive/folders/1CS6Z9iIowdxEaxpaQwBruHZrjednIJMg?usp=sharing",
+        },
+    },
+    {
         title: "Phone Directory",
         description: "An app that stores and manages phone numbers with names. The goal was to learn the architecture of MERN stack and the communication between FE, BE and DB. I also learned basic deployment on platforms such as Vercel and Render. ",
         tech: [
@@ -32,6 +48,7 @@ const projects = [
             files: "#",
         },
     },
+
 ];
 
 export default function Projects() {
