@@ -17,7 +17,7 @@ const projects = [
         },
     },
     {
-        title: "Inventory Management",
+        title: "Stockar",
         description: "This is the Manager Service of an Inventory Management System build in collaboration with my fellow engineers as the semester project of Web Engineering.",
         tech: [
             { name: "React", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
