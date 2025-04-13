@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 body {
-    cursor: url('/cursor_white.svg') 16 16, auto;
+    cursor: url('/cursor_white.svg') 12 12, auto;
 }
 
 @theme inline {
