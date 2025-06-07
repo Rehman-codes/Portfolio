@@ -22,7 +22,7 @@ export default function Home() {
             {/* Spline 3D Model */}
             <div className="w-[50%] h-full relative">
                 <Spline
-                    scene="https://prod.spline.design/mOxsMPmY7kIBTszo/scene.splinecode"
+                    scene="https://prod.spline.design/UgiBiSGLOhQqrvaP/scene.splinecode"
                     className="flex justify-center items-center"
                 />
             </div>
