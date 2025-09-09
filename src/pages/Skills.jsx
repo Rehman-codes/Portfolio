@@ -2,6 +2,7 @@ import Bottom from "../components/Home/Bottom";
 import Top from "../components/Home/Top";
 import { OrbitingCircles } from "@/components/magicui/OrbitingCircles";
 import Dock from "@/components/Dock";
+import useIsLaptopOrLarger from "../lib/useIsLaptopOrLarger";
 import { useNavigate } from "react-router-dom";
 import {
   FolderOpen,
@@ -15,6 +16,7 @@ import {
 } from "lucide-react";
 
 export default function Skills() {
+  const isLaptopOrLarger = useIsLaptopOrLarger();
   const navigate = useNavigate();
 
   const items = [
@@ -131,12 +133,17 @@ export default function Skills() {
       </div>
 
       {/* <Bottom /> */}
-      <Dock
-        items={items}
-        panelHeight={50}
-        baseItemSize={30}
-        magnification={70}
-      />
+      {/* Responsive Navigation */}
+      {isLaptopOrLarger ? (
+        <Dock
+          items={items}
+          panelHeight={50}
+          baseItemSize={30}
+          magnification={70}
+        />
+      ) : (
+        <Bottom />
+      )}
     </section>
   );
 }

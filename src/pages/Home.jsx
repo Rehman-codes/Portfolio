@@ -4,6 +4,7 @@ import Bottom from "../components/Home/Bottom";
 import TextPressure from "../components/Text/TextPressure";
 import TextType from "../components/Text/TextType";
 import Dock from "@/components/Dock";
+import useIsLaptopOrLarger from "../lib/useIsLaptopOrLarger";
 import { useNavigate } from "react-router-dom";
 import {
   FolderOpen,
@@ -17,6 +18,7 @@ import {
 } from "lucide-react";
 
 export default function Home() {
+  const isLaptopOrLarger = useIsLaptopOrLarger();
   const navigate = useNavigate();
 
   const items = [
@@ -123,15 +125,17 @@ export default function Home() {
       {/* Top Navbar */}
       <Top />
 
-      {/* Bottom Navbar */}
-      {/* <Bottom /> */}
-
-      <Dock
-        items={items}
-        panelHeight={50}
-        baseItemSize={30}
-        magnification={70}
-      />
+      {/* Responsive Navigation */}
+      {isLaptopOrLarger ? (
+        <Dock
+          items={items}
+          panelHeight={50}
+          baseItemSize={30}
+          magnification={70}
+        />
+      ) : (
+        <Bottom />
+      )}
     </section>
   );
 }

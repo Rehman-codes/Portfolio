@@ -2,6 +2,7 @@ import Bottom from "../components/Home/Bottom";
 import Top from "../components/Home/Top";
 import ProjectCard from "../components/ProjectCard";
 import Dock from "@/components/Dock";
+import useIsLaptopOrLarger from "../lib/useIsLaptopOrLarger";
 import { useNavigate } from "react-router-dom";
 import {
   FolderOpen,
@@ -84,6 +85,7 @@ const projects = [
 ];
 
 export default function Projects() {
+  const isLaptopOrLarger = useIsLaptopOrLarger();
   const navigate = useNavigate();
 
   const items = [
@@ -139,14 +141,18 @@ export default function Projects() {
       {/* Pass the projects array as a prop */}
       <ProjectCard projects={projects} />
 
-      {/* <Bottom /> */}
-      <Dock
-        items={items}
-        panelHeight={50}
-        baseItemSize={30}
-        magnification={70}
-        className="fixed z-50"
-      />
+      {/* Responsive Navigation */}
+      {isLaptopOrLarger ? (
+        <Dock
+          items={items}
+          panelHeight={50}
+          baseItemSize={30}
+          magnification={70}
+          className="fixed z-50"
+        />
+      ) : (
+        <Bottom />
+      )}
     </section>
   );
 }
