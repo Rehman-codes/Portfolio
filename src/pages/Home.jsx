@@ -3,8 +3,68 @@ import Top from "../components/Home/Top";
 import Bottom from "../components/Home/Bottom";
 import TextPressure from "../components/Text/TextPressure";
 import TextType from "../components/Text/TextType";
+import Dock from "@/components/Dock";
+import { useNavigate } from "react-router-dom";
+import {
+  FolderOpen,
+  Palette,
+  Briefcase,
+  Github,
+  Linkedin,
+  Instagram,
+  Mail,
+  Home as HomeIcon,
+} from "lucide-react";
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  const items = [
+    {
+      icon: <HomeIcon size={18} />,
+      label: "Home",
+      onClick: () => navigate("/"),
+    },
+    {
+      icon: <FolderOpen size={18} />,
+      label: "Projects",
+      onClick: () => navigate("/projects"),
+    },
+    {
+      icon: <Palette size={18} />,
+      label: "Skills",
+      onClick: () => navigate("/skills"),
+    },
+    {
+      icon: <Briefcase size={18} />,
+      label: "Experience",
+      onClick: () => navigate("/experience"),
+    },
+    {
+      icon: <Github size={18} />,
+      label: "GitHub",
+      onClick: () => window.open("https://github.com/Rehman-codes", "_blank"),
+    },
+    {
+      icon: <Linkedin size={18} />,
+      label: "LinkedIn",
+      onClick: () =>
+        window.open("https://www.linkedin.com/in/abdurrehman-swe", "_blank"),
+    },
+    {
+      icon: <Mail size={18} />,
+      label: "Email",
+      onClick: () =>
+        window.open("https://mail.google.com/mail/?view=cm&to=abdurrehman.swe@gmail.com", "_blank"),
+    },
+    {
+      icon: <Instagram size={18} />,
+      label: "Instagram",
+      onClick: () =>
+        window.open("https://www.instagram.com/svelto.co", "_blank"),
+    },
+  ];
+
   return (
     <section className="w-screen h-screen bg-black flex flex-col md:flex-row justify-center items-center relative">
       {/* Intro Section */}
@@ -64,7 +124,14 @@ export default function Home() {
       <Top />
 
       {/* Bottom Navbar */}
-      <Bottom />
+      {/* <Bottom /> */}
+
+      <Dock
+        items={items}
+        panelHeight={50}
+        baseItemSize={30}
+        magnification={70}
+      />
     </section>
   );
 }
