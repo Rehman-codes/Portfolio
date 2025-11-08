@@ -1,14 +1,13 @@
-import { Home, FolderOpen, Palette, User, Github, Linkedin, Instagram, Mail } from 'lucide-react';
+import { Home, FolderOpen, Palette, Briefcase, Github, Linkedin, Instagram, Mail } from 'lucide-react';
 import Tooltip from '../../utilities/Tooltip';
 import { Link as NavLink } from 'react-router-dom';
-
-// { Icon: User, title: "Experience", link: "/experience" },
 
 export default function Bottom() {
     const navIcons = [
         { Icon: Home, title: "Home", link: "/" },
         { Icon: FolderOpen, title: "Projects", link: "/projects" },
         { Icon: Palette, title: "Skills", link: "/skills" },
+        { Icon: Briefcase, title: "Experience", link: "/experience" },
     ];
     const socialIcons = [
         { Icon: Github, title: "GitHub", link: "https://github.com/Rehman-codes" },
