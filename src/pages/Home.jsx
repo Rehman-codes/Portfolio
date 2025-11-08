@@ -74,8 +74,8 @@ export default function Home() {
         id="intro"
         className="w-full md:w-[50%] flex flex-col justify-center items-center px-4 md:px-0"
       >
-        <div className="w-full md:w-[75%] flex flex-col text-center md:text-left">
-          <div style={{ position: "relative", height: "210px" }}>
+        <div className="w-full md:w-[75%] flex flex-col text-center md:text-left gap-y-4 md:gap-y-6">
+          <div className="relative h-[120px] md:h-[210px]">
             <TextPressure
               text="Abdur"
               flex={true}
@@ -86,10 +86,11 @@ export default function Home() {
               italic={true}
               textColor="#ffffff"
               strokeColor="#ff0000"
-              minFontSize={36}
+              minFontSize={18} // smaller for mobile, can override with md:prop in custom TextPressure upgrade
+              className="md:text-[2.25rem]"
             />
           </div>
-          <div style={{ position: "relative", height: "210px" }}>
+          <div className="relative h-[120px] md:h-[210px]">
             <TextPressure
               text="Rehman"
               flex={true}
@@ -100,21 +101,23 @@ export default function Home() {
               italic={true}
               textColor="#ffffff"
               strokeColor="#ff0000"
-              minFontSize={36}
+              minFontSize={18}
+              className="md:text-[2.25rem]"
             />
           </div>
-          <TextType
-            text={["Software Engineer", "Full Stack Web Developer"]}
-            typingSpeed={75}
-            pauseDuration={1500}
-            showCursor={true}
-            cursorCharacter="|"
-          />
+          {/* Job titles in a static card */}
+          <div className="w-full flex justify-center mt-4">
+            <div className="rounded-2xl shadow-lg bg-gradient-to-br from-neutral-900 to-black px-2 py-2 md:px-6 md:py-3 flex flex-row items-center justify-center min-w-[180px] max-w-xs md:max-w-sm text-white font-semibold gap-x-3">
+              <span className="block text-xs md:text-sm xl:text-base whitespace-nowrap">Software Engineer</span>
+              <span className="w-[1px] h-5 md:h-6 bg-neutral-600 mx-2 rounded" />
+              <span className="block text-xs md:text-sm xl:text-base whitespace-nowrap">Full Stack Web Developer</span>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Spline 3D Model */}
-      <div className="w-full md:w-[50%] h-[50%] md:h-full flex justify-center items-center relative">
+      <div className="w-full md:w-[50%] h-[50%] md:h-full flex justify-center items-center relative hidden md:flex">
         <Spline
           scene="https://prod.spline.design/UgiBiSGLOhQqrvaP/scene.splinecode"
           className="w-full h-full"

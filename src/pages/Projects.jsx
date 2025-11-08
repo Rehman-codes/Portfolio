@@ -17,6 +17,25 @@ import {
 
 const projects = [
   {
+    title: "Specora",
+    description:
+      "An AI assisted requirements engineering platform. All activities of requirements engineering in a single platform with AI features.",
+    tech: [
+      {
+        name: "Next.js",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      },
+      { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { name: "Node.js", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
+    ],
+    media: "/specora.png",
+    links: {
+      live: "https://specora.vercel.app/",
+      github: "https://github.com/Rehman-codes/",
+      files: "#",
+    },
+  },
+  {
     title: "GradWiz",
     description:
       "GradWiz is an app specifically developed for undergraduates to manage their assessments throughout the Semester. A single platform where they can manage their projects, assignments, quizzes, exams. It uses Firebase for authentication and data storage. Gmail, Drive and GCR APIs are used to streamline the workflow. ",
@@ -45,10 +64,6 @@ const projects = [
         logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
       },
       { name: "Node", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
-      {
-        name: "Express",
-        logo: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png",
-      },
       { name: "MongoDB", logo: "/mongoDB.svg" },
     ],
     media: "/stockar.png",
@@ -69,10 +84,6 @@ const projects = [
         logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
       },
       { name: "Node", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
-      {
-        name: "Express",
-        logo: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png",
-      },
       { name: "MongoDB", logo: "/mongoDB.svg" },
     ],
     media: "/phoneDir.png",
@@ -135,7 +146,7 @@ export default function Projects() {
   ];
 
   return (
-  <section className="w-full h-auto bg-black flex flex-col items-center overflow-x-hidden relative">
+    <section className="w-full h-auto bg-black flex flex-col items-center overflow-x-hidden relative">
       <Top />
 
       {/* Pass the projects array as a prop */}
