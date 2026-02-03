@@ -25,6 +25,8 @@ export default function ProjectCard({ projects }) {
                                         className="w-6 h-6"
                                         src={tech.logo}
                                         alt={tech.name}
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 ))}
                             </div>
@@ -57,6 +59,8 @@ export default function ProjectCard({ projects }) {
                             className="p-6 md:p-8 max-w-full h-auto object-contain"
                             src={project.media}
                             alt={`${project.title} Media`}
+                            loading="lazy"
+                            decoding="async"
                         />
                     </div>
                 </div>

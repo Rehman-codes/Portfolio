@@ -1,34 +1,49 @@
 import "./index.css";
+import React, { Suspense } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import Experience from "./pages/Experience";
-import Skills from "./pages/Skills";
+const Home = React.lazy(() => import("./pages/Home"));
+const Projects = React.lazy(() => import("./pages/Projects"));
+const Experience = React.lazy(() => import("./pages/Experience"));
+const Skills = React.lazy(() => import("./pages/Skills"));
+
+const LoadingFallback = () => (
+  <div className="w-screen h-screen flex justify-center items-center bg-black text-white">
+    Loading...
+  </div>
+);
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <Home />
+      <Suspense fallback={<LoadingFallback />}>
+        <Home />
+      </Suspense>
     ),
   },
   {
     path: "/projects",
     element: (
-      <Projects />
+      <Suspense fallback={<LoadingFallback />}>
+        <Projects />
+      </Suspense>
     ),
   },
   {
     path: "/experience",
     element: (
-      <Experience />
+      <Suspense fallback={<LoadingFallback />}>
+        <Experience />
+      </Suspense>
     ),
   },
   {
     path: "/skills",
     element: (
-      <Skills />
+      <Suspense fallback={<LoadingFallback />}>
+        <Skills />
+      </Suspense>
     ),
   }
 ]);

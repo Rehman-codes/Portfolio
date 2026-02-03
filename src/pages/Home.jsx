@@ -1,4 +1,5 @@
-import Spline from "@splinetool/react-spline";
+import React, { Suspense, useState, useEffect } from 'react';
+const Spline = React.lazy(() => import('@splinetool/react-spline'));
 import Top from "../components/Home/Top";
 import Bottom from "../components/Home/Bottom";
 import TextPressure from "../components/Text/TextPressure";
@@ -118,10 +119,12 @@ export default function Home() {
 
       {/* Spline 3D Model */}
       <div className="w-full md:w-[50%] h-[50%] md:h-full flex justify-center items-center relative hidden md:flex">
-        <Spline
-          scene="https://prod.spline.design/UgiBiSGLOhQqrvaP/scene.splinecode"
-          className="w-full h-full"
-        />
+        <Suspense fallback={<div className="w-full h-full bg-black animate-pulse flex items-center justify-center text-neutral-800">Loading 3D Scene...</div>}>
+          <Spline
+            scene="https://prod.spline.design/UgiBiSGLOhQqrvaP/scene.splinecode"
+            className="w-full h-full"
+          />
+        </Suspense>
         <div className="absolute bottom-0 right-0 w-40 h-16 bg-black"></div>
       </div>
 
