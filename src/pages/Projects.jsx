@@ -141,7 +141,7 @@ export default function Projects() {
       icon: <Instagram size={18} />,
       label: "Instagram",
       onClick: () =>
-        window.open("https://www.instagram.com/svelto.co", "_blank"),
+        window.open("https://www.instagram.com/sveltosoftware/", "_blank"),
     },
   ];
 

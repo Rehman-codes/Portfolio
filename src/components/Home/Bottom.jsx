@@ -12,7 +12,7 @@ export default function Bottom() {
     const socialIcons = [
         { Icon: Github, title: "GitHub", link: "https://github.com/Rehman-codes" },
         { Icon: Linkedin, title: "LinkedIn", link: "https://www.linkedin.com/in/abdurrehman-swe" },
-        { Icon: Instagram, title: "Instagram", link: "https://www.instagram.com/svelto.co/" },
+        { Icon: Instagram, title: "Instagram", link: "https://www.instagram.com/sveltosoftware/" },
         { Icon: Mail, title: "Email", link: "https://mail.google.com/mail/?view=cm&to=abdurrehman.swe@gmail.com" },
     ];
 
