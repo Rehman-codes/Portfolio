@@ -1,72 +1,30 @@
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense } from 'react';
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
 import Top from "../components/Home/Top";
 import Bottom from "../components/Home/Bottom";
 import TextPressure from "../components/Text/TextPressure";
-import TextType from "../components/Text/TextType";
 import Dock from "@/components/Dock";
 import useIsLaptopOrLarger from "../lib/useIsLaptopOrLarger";
 import { useNavigate } from "react-router-dom";
-import {
-  FolderOpen,
-  Palette,
-  Briefcase,
-  Github,
-  Linkedin,
-  Instagram,
-  Mail,
-  Home as HomeIcon,
-} from "lucide-react";
+import { NAV_ITEMS, SOCIAL_LINKS } from "../lib/constants";
 
 export default function Home() {
   const isLaptopOrLarger = useIsLaptopOrLarger();
   const navigate = useNavigate();
 
-  const items = [
-    {
-      icon: <HomeIcon size={18} />,
-      label: "Home",
-      onClick: () => navigate("/"),
-    },
-    {
-      icon: <FolderOpen size={18} />,
-      label: "Projects",
-      onClick: () => navigate("/projects"),
-    },
-    {
-      icon: <Palette size={18} />,
-      label: "Skills",
-      onClick: () => navigate("/skills"),
-    },
-    {
-      icon: <Briefcase size={18} />,
-      label: "Experience",
-      onClick: () => navigate("/experience"),
-    },
-    {
-      icon: <Github size={18} />,
-      label: "GitHub",
-      onClick: () => window.open("https://github.com/Rehman-codes", "_blank"),
-    },
-    {
-      icon: <Linkedin size={18} />,
-      label: "LinkedIn",
-      onClick: () =>
-        window.open("https://www.linkedin.com/in/abdurrehman-swe", "_blank"),
-    },
-    {
-      icon: <Mail size={18} />,
-      label: "Email",
-      onClick: () =>
-        window.open("https://mail.google.com/mail/?view=cm&to=abdurrehman.swe@gmail.com", "_blank"),
-    },
-    {
-      icon: <Instagram size={18} />,
-      label: "Instagram",
-      onClick: () =>
-        window.open("https://www.instagram.com/sveltosoftware/", "_blank"),
-    },
-  ];
+  const navItems = NAV_ITEMS.map((item) => ({
+    icon: <item.icon size={18} />,
+    label: item.label,
+    onClick: () => navigate(item.path),
+  }));
+
+  const socialItems = SOCIAL_LINKS.map((item) => ({
+    icon: <item.icon size={18} />,
+    label: item.label,
+    onClick: () => window.open(item.url, "_blank"),
+  }));
+
+  const items = [...navItems, ...socialItems];
 
   return (
     <section className="w-screen h-screen bg-black flex flex-col md:flex-row justify-center items-center relative">

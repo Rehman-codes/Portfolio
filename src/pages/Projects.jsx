@@ -4,16 +4,7 @@ import ProjectCard from "../components/ProjectCard";
 import Dock from "@/components/Dock";
 import useIsLaptopOrLarger from "../lib/useIsLaptopOrLarger";
 import { useNavigate } from "react-router-dom";
-import {
-  FolderOpen,
-  Palette,
-  Briefcase,
-  Github,
-  Linkedin,
-  Instagram,
-  Mail,
-  Home as HomeIcon,
-} from "lucide-react";
+import { NAV_ITEMS, SOCIAL_LINKS } from "../lib/constants";
 
 const projects = [
   {
@@ -99,51 +90,19 @@ export default function Projects() {
   const isLaptopOrLarger = useIsLaptopOrLarger();
   const navigate = useNavigate();
 
-  const items = [
-    {
-      icon: <HomeIcon size={18} />,
-      label: "Home",
-      onClick: () => navigate("/"),
-    },
-    {
-      icon: <FolderOpen size={18} />,
-      label: "Projects",
-      onClick: () => navigate("/projects"),
-    },
-    {
-      icon: <Palette size={18} />,
-      label: "Skills",
-      onClick: () => navigate("/skills"),
-    },
-    {
-      icon: <Briefcase size={18} />,
-      label: "Experience",
-      onClick: () => navigate("/experience"),
-    },
-    {
-      icon: <Github size={18} />,
-      label: "GitHub",
-      onClick: () => window.open("https://github.com/Rehman-codes", "_blank"),
-    },
-    {
-      icon: <Linkedin size={18} />,
-      label: "LinkedIn",
-      onClick: () =>
-        window.open("https://www.linkedin.com/in/abdurrehman-swe", "_blank"),
-    },
-    {
-      icon: <Mail size={18} />,
-      label: "Email",
-      onClick: () =>
-        window.open("https://mail.google.com/mail/?view=cm&to=abdurrehman.swe@gmail.com", "_blank"),
-    },
-    {
-      icon: <Instagram size={18} />,
-      label: "Instagram",
-      onClick: () =>
-        window.open("https://www.instagram.com/sveltosoftware/", "_blank"),
-    },
-  ];
+  const navItems = NAV_ITEMS.map((item) => ({
+    icon: <item.icon size={18} />,
+    label: item.label,
+    onClick: () => navigate(item.path),
+  }));
+
+  const socialItems = SOCIAL_LINKS.map((item) => ({
+    icon: <item.icon size={18} />,
+    label: item.label,
+    onClick: () => window.open(item.url, "_blank"),
+  }));
+
+  const items = [...navItems, ...socialItems];
 
   return (
     <section className="w-full h-auto bg-black flex flex-col items-center overflow-x-hidden relative">
